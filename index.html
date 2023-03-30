@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <header>
+    <button class="mobile-navbar-hamburger" aria-expanded="false"></button>
+    <img class='header--logo' src='./images/logo.svg'/>
+
+    <nav class='header--nav-bar' aria-expanded="false">
+      <button class="mobile-close-btn mobile-navbar-hamburger"></button>
+        <ul class="nav-container">
+            <li><a href='#'>Collections</a></li>
+            <li><a href='#'>Men</a></li>
+            <li><a href='#'>Women</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-overlay" aria-expanded="false"></div>
+
+    <nav class='header--secondary-nav-bar'>
+        <a href='#' 
+            class='cart'>
+            <img class='header--cart-icon' 
+                src='./images/icon-cart.svg'/>
+            <span class='cart-count'>0</span>
+            <div 
+                class='cart-card'
+                aria-expanded='false'
+            >
+                <p>Cart</p>
+                <div class='divider'></div>
+                <div class='card-data'>
+                    <p>Your cart is empty.</p>
+                    <!-- <div class="details">
+                      <img class="thumbnail" src="./images/image-product-1-thumbnail.jpg" alt="">
+                      <div class="details-container">
+                        <p>Fall Limited Edition Sneakers</p>
+                        <p>$125.00 x 3 <span class="total-price">$375.00</span></p>
+                      </div>
+                      <img src="./images/icon-delete.svg" alt="" class="delete-icon">
+                    </div>
+
+                    <button class="checkout-btn">Checkout</button> -->
+                </div>
+            </div>
+        </a>
+  
+        <a href='#' class='user-avatar'>
+            <img 
+                class='header--user-profile'
+                src='./images/image-avatar.png'
+            />
+        </a>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class='hero--container'>
+        <div class='hero--product-gallery'>
+          <div class="current-img">
+            <div class="mobile-btns">
+              <button class="prev " name="prev"></button>
+              <button class="next " name="next"></button>
+            </div>
+
+            <div class="current-img-container">
+              <img src="./images/image-product-1.jpg" alt="" />
+            </div>
+          </div>
+            
+          <div class="more-images">
+            <div class='active'>
+                <img  class="more-imgs" data-position="1" src="./images/image-product-1.jpg" alt=""/>
+            </div> 
+
+            <div>
+                <img  class="more-imgs" data-position="2" src="./images/image-product-2.jpg" alt="" />
+            </div>
+
+            <div>
+                <img class="more-imgs" data-position="3" src="./images/image-product-3.jpg" alt="" />      
+            </div>
+
+            <div>
+                <img  class="more-imgs" data-position="4" src="./images/image-product-4.jpg" alt="" />
+            </div>
+          </div>
+
+          
+          <div class="image-overlay" aria-hidden="false">
+            <div style="display: flex; flex-direction:column; position: relative;">
+              <button class="close-btn"></button>
+              <button class="prev slider-btn" name="prev"></button>
+              <button class="next slider-btn" name="next"></button>
+              <div class="image-overlay-container">
+              </div>
+
+              <div class="layover-more-images">
+                <div class='active'>
+                  <img  data-position="1"  class="slider-images" src="./images/image-product-1.jpg" alt=""/>
+                </div> 
+  
+                <div>
+                  <img  data-position="2"  class="slider-images"src="./images/image-product-2.jpg" alt="" />
+                </div>
+  
+                <div>
+                  <img  data-position="3"class="slider-images" src="./images/image-product-3.jpg" alt="" />      
+                </div>
+  
+                <div>
+                  <img  data-position="4" class="slider-images"src="./images/image-product-4.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class='hero--product-info'>
+          <p class="product-brand">SNEAKER COMPANY</p>
+          
+          <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+          <p class="product-subtitle">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole. they'll withstand and everything the weather can offer</p>
+          <div class="price-container">
+            <p class="current-price">$125.00 <span class="discount">50%</span></p>
+            <p class="previous-price">$250.00</p>
+
+          </div>
+
+          <div class="checkout-container">
+            <div class="quantity-control">
+              <button class="minus controls-btn" data-type="remove">
+                <svg width="12" height="4" x mlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
+              </button>
+                <p class="quantity-count">1</p>
+              <button class="plus controls-btn" data-type="add">
+                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
+              </button>
+            </div>
+            
+
+            <button class="addtocart-btn">
+              <svg class="btn-cart" width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
+              Add to cart
+            </button>
+          </div>
+        </div>
+    </div>
+  </main>
+
+  <!-- <div class="image-carousel">
+    <div class="current-img">
+      <img src="./images/image-product-1.jpg" alt="">
+    </div>
+
+    <div class="more-images">
+      <img src="./images/image-product-2.jpg" alt="">
+      <img src="./images/image-product-3.jpg" alt="">
+      <img src="./images/image-product-4.jpg" alt="">
+    </div>
+
+    <div class="image-overlay" aria-hidden="false">
+
+      <div class="image-overlay-container">
+
+      </div>
+      <button class="close-btn">Close</button>
+    </div>
+  </div> -->
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
